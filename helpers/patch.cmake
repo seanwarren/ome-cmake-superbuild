@@ -26,7 +26,8 @@ if(EXISTS "${seriesfile}")
     set(PATCH_OPTIONS -p1 -E)
 
     if(MSVC)
-      execute_process(COMMAND patch ${PATCH_OPTIONS}
+      execute_process(COMMAND todos
+                      COMMAND patch ${PATCH_OPTIONS}
                       WORKING_DIRECTORY "${SOURCE_DIR}"
                       INPUT_FILE "${PATCH_DIR}/${patch}"
                       RESULT_VARIABLE patch_result)
